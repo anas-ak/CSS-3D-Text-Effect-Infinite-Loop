@@ -1,0 +1,53 @@
+$ease: cubic-bezier(0.47, 0.01, 0, 1.01);
+
+div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: url(https://images.unsplash.com/photo-1418226970361-9f1f7227d638?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=) no-repeat center center / cover;
+}
+
+span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(calc(-50% - 12px),calc(-50% + 12px),0);
+
+    mix-blend-mode: screen;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white,
+                 0px 0px white;
+    opacity: 0;
+    animation: revolve 2s $ease alternate 1.75s infinite;
+
+    @keyframes revolve {
+        to { opacity: 1; transform: translate3d(-50%, -50%, 0); 
+            text-shadow: -2px 1px white, 
+                         -3px 2px white, 
+                         -4px 3px white,
+                         -5px 4px white, 
+                         -6px 5px white, 
+                         -7px 6px white, 
+                         -8px 7px white, 
+                         -9px 8px white,
+                         -10px 9px white,
+                         -11px 10px white, 
+                         -12px 11px white;
+        }
+    }
+}   
